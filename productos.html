@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Tecno Oriental</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { padding-top: 62px; }
+    .layout { display: flex; gap: 2rem; align-items: flex-start; }
+    .sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      position: sticky;
+      top: 82px;
+    }
+    .sidebar-title {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+    .cat-filter-list { list-style: none; margin-bottom: 1.5rem; }
+    .cat-filter-list li { margin-bottom: 0.25rem; }
+    .cat-filter-list a {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      transition: all 0.2s;
+    }
+    .cat-filter-list a:hover, .cat-filter-list a.active {
+      background: linear-gradient(135deg, rgba(0,122,255,0.1), rgba(0,212,255,0.1));
+      color: var(--primary);
+    }
+    .cat-filter-list a.active { font-weight: 600; }
+    .sidebar hr { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+    .search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 0.5rem 1rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.2s;
+    }
+    .search-wrap:focus-within { border-color: var(--primary); }
+    .search-wrap input {
+      border: none;
+      background: none;
+      flex: 1;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--text-dark);
+      outline: none;
+    }
+    .search-wrap i { color: var(--text-light); }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .results-count { font-size: 0.88rem; color: var(--text-light); }
+    .sort-select {
+      padding: 0.45rem 0.9rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .main-content { flex: 1; min-width: 0; }
+    .mobile-filter-btn {
+      display: none;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; position: static; display: none; }
+      .sidebar.open { display: block; }
+      .mobile-filter-btn { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Nuestros Productos</h1>
+    <p>Calidad importada al mejor precio</p>
+  </div>
+
+  <div class="container" style="padding-bottom:4rem;">
+    <!-- Search -->
+    <div class="search-wrap">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Buscar productos...">
+    </div>
+
+    <button class="btn btn-ghost mobile-filter-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">
+      <i class="fas fa-filter"></i> Filtros
+    </button>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-title">Categorías</div>
+        <ul class="cat-filter-list" id="cat-list">
+          <li><a href="#" class="active" data-cat="">Todas las categorías</a></li>
+        </ul>
+        <hr>
+        <div class="sidebar-title">Precio máximo</div>
+        <input type="range" id="priceRange" min="0" max="15000" step="100" value="15000" style="width:100%;accent-color:var(--primary);">
+        <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--text-light);margin-top:.4rem;">
+          <span>L 0</span><span id="priceLabel">L 15,000</span>
+        </div>
+        <hr>
+        <label style="display:flex;align-items:center;gap:.5rem;font-size:.88rem;cursor:pointer;">
+          <input type="checkbox" id="onlyStock" style="accent-color:var(--primary);">
+          Solo disponibles
+        </label>
+      </aside>
+
+      <!-- Main -->
+      <div class="main-content">
+        <div class="toolbar">
+          <span class="results-count" id="results-count">Cargando…</span>
+          <select class="sort-select" id="sortSelect">
+            <option value="name">Nombre A-Z</option>
+            
+          </select>
+        </div>
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script>
+    injectNav('products');
+    injectFooter();
+
+    let activeCat = null;
+
+    // Read URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('category')) activeCat = parseInt(urlParams.get('category'));
+    if (urlParams.get('search')) document.getElementById('searchInput').value = urlParams.get('search');
+
+    function pageInit() {
+      // Categories sidebar
+      const list = document.getElementById('cat-list');
+      G9Store.getCategories().forEach(c => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="#" data-cat="${c.id}">${c.name}</a>`;
+        li.querySelector('a').addEventListener('click', e => {
+          e.preventDefault();
+          activeCat = c.id;
+          document.querySelectorAll('.cat-filter-list a').forEach(a => a.classList.remove('active'));
+          e.target.classList.add('active');
+          renderProducts();
+        });
+        list.appendChild(li);
+      });
+
+      // All categories link
+      list.querySelector('[data-cat=""]').addEventListener('click', e => {
+        e.preventDefault();
+        activeCat = null;
+        document.querySelectorAll('.cat-filter-list a').forEach(a => a.classList.remove('active'));
+        e.target.classList.add('active');
+        renderProducts();
+      });
+
+      // Set active cat
+      if (activeCat) {
+        document.querySelectorAll('.cat-filter-list a').forEach(a => {
+          if (parseInt(a.dataset.cat) === activeCat) a.classList.add('active');
+          else if (!a.dataset.cat) a.classList.remove('active');
+        });
+      }
+
+      // Filters
+      document.getElementById('searchInput').addEventListener('input', renderProducts);
+      document.getElementById('priceRange').addEventListener('input', function() {
+        document.getElementById('priceLabel').textContent = 'L ' + Number(this.value).toLocaleString('es-HN');
+        renderProducts();
+      });
+      document.getElementById('onlyStock').addEventListener('change', renderProducts);
+      document.getElementById('sortSelect').addEventListener('change', renderProducts);
+
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const search = document.getElementById('searchInput').value;
+      const maxPrice = parseFloat(document.getElementById('priceRange').value);
+      const onlyStock = document.getElementById('onlyStock').checked;
+      const sortBy = document.getElementById('sortSelect').value;
+
+      let list = G9Store.getProducts({ category_id: activeCat, search });
+      list = list.filter(p => p.price <= maxPrice);
+      if (onlyStock) list = list.filter(p => p.available !== false);
+
+      list.sort((a, b) => {
+        if (sortBy === 'price-asc') return a.price - b.price;
+        if (sortBy === 'price-desc') return b.price - a.price;
+        return a.name.localeCompare(b.name);
+      });
+
+      const grid = document.getElementById('products-grid');
+      document.getElementById('results-count').textContent = `${list.length} producto${list.length !== 1 ? 's' : ''} encontrado${list.length !== 1 ? 's' : ''}`;
+
+      if (list.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state" style="grid-column:1/-1;">
+            <i class="fas fa-box-open"></i>
+            <h2>Sin resultados</h2>
+            <p>Intenta ajustar los filtros o buscar algo diferente</p>
+          </div>`;
+        return;
+      }
+      grid.innerHTML = list.map(productCardHTML).join('');
+    }
+  </script>
+</body>
+</html>

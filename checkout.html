@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar Pedido - Tecno Oriental</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- EmailJS: envía el correo directamente desde el navegador, sin servidor propio -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <style>
+    body { padding-top: 62px; }
+    .checkout-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 2.5rem;
+      align-items: start;
+      padding: 3rem 0 5rem;
+    }
+    .steps { display: flex; justify-content: center; gap: 0; margin-bottom: 2.5rem; }
+    .step { display: flex; align-items: center; gap: 0.5rem; }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; font-weight: 700; font-family: var(--font-display);
+      background: var(--border); color: var(--text-light); transition: all 0.3s;
+    }
+    .step.done .step-num, .step.active .step-num { background: var(--gradient); color: white; }
+    .step.active .step-num { box-shadow: 0 0 0 4px rgba(0,122,255,0.2); }
+    .step-label { font-size: 0.82rem; color: var(--text-light); font-weight: 500; }
+    .step.active .step-label, .step.done .step-label { color: var(--primary); }
+    .step-line { width: 60px; height: 2px; background: var(--border); margin: 0 0.5rem; }
+
+    .form-section {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.75rem; margin-bottom: 1.5rem;
+    }
+    .form-section-title {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+    }
+    .form-section-title i { color: var(--primary); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Botón de envío por correo */
+    .btn-send-order {
+      display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+      width: 100%; padding: 1rem 1.5rem;
+      background: var(--gradient); color: white; border: none;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+      cursor: pointer; transition: all 0.25s; letter-spacing: 0.3px;
+    }
+    .btn-send-order:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,122,255,0.35);
+    }
+    .btn-send-order:disabled { opacity: 0.65; cursor: not-allowed; }
+    .btn-send-order i { font-size: 1.2rem; }
+
+    .mail-note {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      background: rgba(0,122,255,0.06); border: 1px solid rgba(0,122,255,0.2);
+      border-radius: var(--radius-sm); padding: 0.9rem 1rem;
+      font-size: 0.82rem; color: var(--text-mid); margin-bottom: 1rem; line-height: 1.5;
+    }
+    .mail-note i { color: var(--primary); margin-top: 0.1rem; flex-shrink: 0; font-size: 1.1rem; }
+
+    .send-error {
+      display: none;
+      align-items: flex-start; gap: 0.6rem;
+      background: rgba(255,59,48,0.08); border: 1px solid rgba(255,59,48,0.25);
+      border-radius: var(--radius-sm); padding: 0.9rem 1rem;
+      font-size: 0.82rem; color: #c9302c; margin-bottom: 1rem; line-height: 1.5;
+    }
+    .send-error i { color: #ff3b30; margin-top: 0.1rem; flex-shrink: 0; }
+
+    /* Sidebar */
+    .order-summary {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.75rem; position: sticky; top: 90px;
+    }
+    .os-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 1.25rem; }
+    .os-item {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem;
+    }
+    .os-item:last-of-type { border-bottom: none; }
+    .os-item-name { color: var(--text-mid); flex: 1; }
+    .os-item-price { color: var(--text-dark); font-weight: 600; flex-shrink: 0; }
+    .os-total {
+      display: flex; justify-content: space-between;
+      font-family: var(--font-display); font-weight: 800; font-size: 1.15rem;
+      padding-top: 1rem; border-top: 2px solid var(--border); margin-top: 0.5rem;
+    }
+    .os-total span:last-child {
+      background: var(--gradient);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    @media (max-width: 820px) {
+      .checkout-layout { grid-template-columns: 1fr; }
+      .order-summary { position: static; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .form-section { padding: 1.25rem; }
+      .btn-send-order { padding: 1.1rem 1.25rem; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1><i class="fas fa-envelope"></i> Enviar Pedido</h1>
+  </div>
+
+  <div class="container">
+    <div class="steps">
+      <div class="step done">
+        <div class="step-num"><i class="fas fa-check"></i></div>
+        <span class="step-label">Carrito</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step active">
+        <div class="step-num">2</div>
+        <span class="step-label">Tus datos</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step">
+        <div class="step-num"><i class="fas fa-envelope"></i></div>
+        <span class="step-label">Correo</span>
+      </div>
+    </div>
+
+    <div id="checkout-content"></div>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script>
+    // ================================================================
+    //  ★ CONFIGURA TU CUENTA DE EMAILJS (gratis, sin servidor propio)
+    //  1. Crea una cuenta en https://www.emailjs.com y conecta tu Gmail
+    //     como "Email Service".
+    //  2. Crea un "Email Template" con estas variables (usa triple llave
+    //     {{{items_html}}} para que las fotos/lista salgan con formato):
+    //       {{order_id}} {{order_date}} {{customer_name}} {{customer_phone}}
+    //       {{customer_email}} {{customer_address}} {{notes}} {{subtotal}}
+    //       {{iva}} {{total}} {{{items_html}}}
+    //  3. Copia aquí abajo tu Public Key, Service ID y Template ID.
+    // ================================================================
+    const EMAILJS_PUBLIC_KEY  = 'TU_PUBLIC_KEY';
+    const EMAILJS_SERVICE_ID  = 'TU_SERVICE_ID';
+    const EMAILJS_TEMPLATE_ID = 'TU_TEMPLATE_ID';
+    const DESTINATION_EMAIL   = 'cuentapve@gmail.com';
+
+    if (window.emailjs && EMAILJS_PUBLIC_KEY !== 'TU_PUBLIC_KEY') {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    injectNav('');
+    injectFooter();
+
+    function pageInit() {
+      const cart = G9Store.cart.get();
+      if (cart.length === 0) { window.location.href = 'carrito.html'; return; }
+
+      const subtotal = G9Store.cart.total();
+      const iva      = subtotal * 0.15;
+      const total    = subtotal + iva;
+
+      const osItems = cart.map(item => `
+        <div class="os-item">
+          <span class="os-item-name">
+            ${item.name} × ${item.quantity}
+            ${item.variant_info ? `<br><small style="color:var(--text-light)">${item.variant_info}</small>` : ''}
+          </span>
+          <span class="os-item-price">${formatPrice(item.price * item.quantity)}</span>
+        </div>`).join('');
+
+      document.getElementById('checkout-content').innerHTML = `
+        <div class="checkout-layout">
+          <form id="checkout-form">
+
+            <div class="form-section">
+              <div class="form-section-title"><i class="fas fa-user"></i> Información Personal</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Nombre completo *</label>
+                  <input type="text" class="form-control" name="name" placeholder="Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Tu correo (opcional)</label>
+                  <input type="email" class="form-control" name="email" placeholder="tu@correo.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Teléfono *</label>
+                <input type="tel" class="form-control" name="phone" placeholder="+504 9999-9999" required>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title"><i class="fas fa-map-marker-alt"></i> Dirección de Entrega</div>
+              <div class="form-group">
+                <label class="form-label">Dirección completa *</label>
+                <input type="text" class="form-control" name="address"
+                       placeholder="Colonia, calle, número de casa, punto de referencia" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Ciudad *</label>
+                  <input type="text" class="form-control" name="city" placeholder="Tegucigalpa" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Departamento</label>
+                  <input type="text" class="form-control" name="state" placeholder="Francisco Morazán">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title"><i class="fas fa-comment-alt"></i> Notas adicionales (opcional)</div>
+              <textarea class="form-control" name="notes"
+                placeholder="Instrucciones especiales, horario preferido de entrega..."
+                style="min-height:80px;"></textarea>
+            </div>
+
+            <div class="mail-note">
+              <i class="fas fa-envelope"></i>
+              <span>
+                Al confirmar, tu pedido se envía automáticamente por correo con el
+                listado de productos, cantidades y el total. Te contactaremos por
+                teléfono o correo para coordinar el pago y la entrega
+                (no procesamos pagos en línea).
+              </span>
+            </div>
+
+            <div class="send-error" id="send-error">
+              <i class="fas fa-triangle-exclamation"></i>
+              <span>No se pudo enviar el pedido. Revisa tu conexión e inténtalo de nuevo.</span>
+            </div>
+
+            <button type="submit" class="btn-send-order" id="send-btn">
+              <i class="fas fa-paper-plane"></i> Enviar pedido
+            </button>
+
+          </form>
+
+          <!-- Resumen -->
+          <div class="order-summary">
+            <div class="os-title">Resumen del pedido</div>
+            ${osItems}
+            <div class="os-item">
+              <span class="os-item-name">Subtotal</span>
+              <span class="os-item-price">${formatPrice(subtotal)}</span>
+            </div>
+            <div class="os-item">
+              <span class="os-item-name">Envío</span>
+              <span class="os-item-price" style="color:var(--primary);">A coordinar</span>
+            </div>
+            <div class="os-item">
+              <span class="os-item-name">ISV (15%)</span>
+              <span class="os-item-price">${formatPrice(iva)}</span>
+            </div>
+            <div class="os-total">
+              <span>Total estimado</span>
+              <span>${formatPrice(total)}</span>
+            </div>
+            <div style="margin-top:1.25rem;padding:1rem;
+                        background:rgba(0,122,255,0.06);
+                        border:1px solid rgba(0,122,255,0.2);
+                        border-radius:var(--radius-sm);
+                        font-size:0.8rem;color:var(--text-mid);
+                        display:flex;align-items:center;gap:.6rem;">
+              <i class="fas fa-clock" style="color:var(--primary);font-size:1.2rem;flex-shrink:0;"></i>
+              Recibirás confirmación en menos de 24 horas.
+            </div>
+          </div>
+        </div>`;
+
+      document.getElementById('checkout-form').addEventListener('submit', handleOrder);
+    }
+
+    // ── Construye el pedido, genera el recibo en HTML y lo envía por correo ──
+    async function handleOrder(e) {
+      e.preventDefault();
+      const fd       = new FormData(e.target);
+      const cart     = G9Store.cart.get();
+      const subtotal = G9Store.cart.total();
+      const iva      = subtotal * 0.15;
+      const total    = subtotal + iva;
+      const btn      = document.getElementById('send-btn');
+      const errBox   = document.getElementById('send-error');
+
+      errBox.style.display = 'none';
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+      const customer = {
+        name:    fd.get('name'),
+        email:   fd.get('email') || '—',
+        phone:   fd.get('phone'),
+        address: [fd.get('address'), fd.get('city'), fd.get('state')].filter(Boolean).join(', ')
+      };
+
+      // Guardar pedido en localStorage (para el recibo imprimible)
+      const order = G9Store.orders.save({
+        customer,
+        items:   cart,
+        subtotal,
+        total,
+        notes:   fd.get('notes') || ''
+      });
+
+      // ── Tabla HTML con fotos, para insertar sin escapar en la plantilla ──
+      // Las fotos del correo necesitan una dirección pública completa,
+      // porque el correo se abre fuera del sitio.
+      const absImg = (path) => {
+        if (!path) return '';
+        if (path.startsWith('http')) return path;
+        if (path.startsWith('data:')) return path;
+        return new URL(G9Store.basePath() + path.replace(/^\//, ''), window.location.href).href;
+      };
+
+      const itemsHtml = `
+        <table style="width:100%;border-collapse:collapse;font-family:'Times New Roman',serif;">
+          ${cart.map(i => `
+            <tr style="border-bottom:1px solid #ddd;">
+              <td style="padding:8px 6px;width:60px;">
+                <img src="${absImg(i.image)}" width="52" height="52" style="object-fit:contain;border-radius:6px;" alt="${i.name}">
+              </td>
+              <td style="padding:8px 6px;">
+                <strong>${i.name}</strong>${i.variant_info ? `<br><span style="color:#888;font-size:12px;">${i.variant_info}</span>` : ''}
+                <br><span style="color:#555;font-size:13px;">${i.quantity} × ${formatPrice(i.price)}</span>
+              </td>
+              <td style="padding:8px 6px;text-align:right;font-weight:bold;">${formatPrice(i.price * i.quantity)}</td>
+            </tr>`).join('')}
+        </table>`;
+
+      const templateParams = {
+        to_email:        DESTINATION_EMAIL,
+        order_id:        String(order.id).slice(-8),
+        order_date:      new Date().toLocaleString('es-HN'),
+        customer_name:   customer.name,
+        customer_phone:  customer.phone,
+        customer_email:  customer.email,
+        customer_address: customer.address,
+        notes:           fd.get('notes') || '—',
+        subtotal:        formatPrice(subtotal),
+        iva:             formatPrice(iva),
+        total:           formatPrice(total),
+        items_html:      itemsHtml
+      };
+
+      try {
+        if (!window.emailjs || EMAILJS_PUBLIC_KEY === 'TU_PUBLIC_KEY') {
+          throw new Error('EmailJS no está configurado todavía.');
+        }
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+        G9Store.cart.clear();
+        window.location.href = `pedido-exitoso.html?id=${order.id}`;
+      } catch (err) {
+        console.error(err);
+        errBox.style.display = 'flex';
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar pedido';
+      }
+    }
+  </script>
+</body>
+</html>
