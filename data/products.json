@@ -1886,7 +1886,8 @@
     "available": true,
     "images": [
       "img/productos/221.jpeg",
-      "img/productos/229.jpeg"
+      "img/productos/229.jpeg",
+      "img/productos/236.jpeg"
     ],
     "variants": []
   },
@@ -2609,6 +2610,67 @@
     "available": true,
     "images": [
       "img/productos/amplificador.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 175,
+    "name": "Camillas de Hospital ",
+    "description": "<p>Sencilla y con ruedas</p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/cama.jpeg",
+      "img/productos/cama2.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 176,
+    "name": "Volante para carro universal",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/volante.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 177,
+    "name": "Claxon de carro ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/Pito carro.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 178,
+    "name": "Bota Ortopédica",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/pierna.jpeg"
     ],
     "variants": []
   }
