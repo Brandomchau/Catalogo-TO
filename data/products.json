@@ -25,7 +25,8 @@
     "featured": false,
     "available": true,
     "images": [
-      "img/productos/10.jpeg"
+      "img/productos/10.jpeg",
+      "img/productos/14.jpeg"
     ],
     "variants": []
   },
@@ -656,6 +657,1958 @@
     "available": true,
     "images": [
       "img/productos/144.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 45,
+    "name": "Esmeril para las uñas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/134.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 46,
+    "name": "Socadora de terminales de sonido",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/135.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 47,
+    "name": "DRL para Hilux revo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/136.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 48,
+    "name": "Kit de cromo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/137.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 49,
+    "name": "Kit de seguros grandes ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/138.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 50,
+    "name": "Kit para abrir y cerrar carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/139.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 52,
+    "name": "Subwoofer Araña Kuerl",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/143.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 53,
+    "name": "Kit de fusibles pequeños ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/145.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 54,
+    "name": "Kit de espátula ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/146.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 55,
+    "name": "alógena para carro Z30 ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/147.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 56,
+    "name": "Royo de cables para 12v",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/148.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 57,
+    "name": "Cargador USB de 30 pines",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/149.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 58,
+    "name": "Pelador de maíz ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/15.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 59,
+    "name": "Carama  NP300",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/150.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 60,
+    "name": "Pistola de juguete ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/151.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 61,
+    "name": "Mandril de 3 mordazas para torno",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/152.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 62,
+    "name": "Parche insonorizarte para carro ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/153.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 63,
+    "name": "Placa de sonido para reproductores ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/154.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 64,
+    "name": "DSP ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/155.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 65,
+    "name": "Estuche para cepillo ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/156.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 66,
+    "name": "Soporte de celular para Moto ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/157.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 67,
+    "name": "Kit Protector de pedales",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/158.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 68,
+    "name": "Interruptores de colores ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/159.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 69,
+    "name": "Borrar",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/16.jpeg",
+      "img/productos/194.jpeg",
+      "img/productos/20.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 70,
+    "name": "Soplador de aire 48 Vf",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/160.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 71,
+    "name": "Kit de cámaras ( sin disco duro)",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/161.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 72,
+    "name": "Shaver kemei MODEL KM-1102",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/162.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 73,
+    "name": "Cámara para Hlux revo ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/163.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 74,
+    "name": "Impedancia ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/164.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 75,
+    "name": "Repuesto de timón para CRV 2008",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/165.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 76,
+    "name": "Afeitadora kemei ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/166.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 77,
+    "name": "insigna de Hyundai ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/167.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 78,
+    "name": "Cortadora de pelo 5 en 1",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/168.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 79,
+    "name": "Stock de Hilux revo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/169.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 80,
+    "name": "Alógena y DRL para HIACE",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/17.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 81,
+    "name": "Repuesto de bolsa de aire para Hyundai",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/170.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 82,
+    "name": "Loderas para Hilux ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/171.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 83,
+    "name": "Transformador de 12 a 220 y 110",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/172.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 84,
+    "name": "Silla gamer ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/173.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 85,
+    "name": "Manos libres ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/174.jpeg",
+      "img/productos/175.jpeg",
+      "img/productos/183.jpeg",
+      "img/productos/187.jpeg",
+      "img/productos/199.jpeg",
+      "img/productos/197.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 86,
+    "name": "Cortadora de varilla industrial   ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/176.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 87,
+    "name": "Sandalias  ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 2,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/177.jpeg",
+      "img/productos/182.jpeg",
+      "img/productos/188.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 88,
+    "name": "Auriculares inalámbricos ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/178.jpeg",
+      "img/productos/179.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 89,
+    "name": "Mochila militar ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/18.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 90,
+    "name": "Filtro de audio ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/180.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 91,
+    "name": "Linterna pequeña recargable ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/181.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 92,
+    "name": "Bicicleta ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/184.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 93,
+    "name": "Trapeadores ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/185.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 94,
+    "name": "Copiadora de llaves ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/186.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 95,
+    "name": "Maquina freidora",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/189.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 96,
+    "name": "Rasuradora Vintage ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/190.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 97,
+    "name": "Pantalla Android de 13  ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/19.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 98,
+    "name": "Rasuradora Yandou SC-W301U",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/191.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 99,
+    "name": "Accesorio láser verde",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/192.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 100,
+    "name": "TV box ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/193.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 102,
+    "name": "Tendedero De ropa ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/195.jpeg",
+      "img/productos/198.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 103,
+    "name": "Auxiliar a bluetooth ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/196.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 104,
+    "name": "Rizadora  ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/2.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 106,
+    "name": "Cámara wifi exterior ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/4.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 107,
+    "name": "Adoptador de manguera ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/5.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 116,
+    "name": "Audifonos S6",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/200.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 117,
+    "name": "Audífonos Inalámbricos TWS",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/201.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 118,
+    "name": "Medidor de Glucosa",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/202.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 119,
+    "name": "Claxon de hierro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/203.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 120,
+    "name": "Halógena universal para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/204.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 121,
+    "name": "Caja fuerte ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/205.jpeg",
+      "img/productos/caja fuerte.jpeg",
+      "img/productos/207.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 51,
+    "name": "Juego de corta uñas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/206.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 122,
+    "name": "Alarma policial para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/208.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 123,
+    "name": "Cargador S10 15w ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/209.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 124,
+    "name": "Luz led universal",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/210.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 125,
+    "name": "Cargador de moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/211.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 126,
+    "name": "Soldadora para plastico",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/212.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 127,
+    "name": "Botón de encendido push para carro ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/213.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 128,
+    "name": "Bajo encajonado 10 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "https://via.placeholder.com/400x300?text=Sin+Imagen",
+      "img/productos/214.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 129,
+    "name": "Barra de sonido SR200",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/215.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 130,
+    "name": "Kit de sensores de parque para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/216.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 131,
+    "name": "Radio MP5 de 7 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/217.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 132,
+    "name": "Desarmador electrico",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/218.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 133,
+    "name": "Cinta aislante de colores",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/219.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 134,
+    "name": "Cabeza de Iphone 12w",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/220.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 135,
+    "name": "Panas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/221.jpeg",
+      "img/productos/229.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 136,
+    "name": "Radio MP5 de 4 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/222.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 137,
+    "name": "Bote de plástico ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/223.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 138,
+    "name": "Manos libres entrada de Iphone",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/224.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 139,
+    "name": "GPS para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/225.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 140,
+    "name": "Bote 12oz para niño",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/226.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 141,
+    "name": "Ventilador mini portátiles",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/227.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 142,
+    "name": "Radio MP5 de 7 pulgadas 1 din",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/230.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 143,
+    "name": "Radio MP5 ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/231.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 144,
+    "name": "Radio android 7 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/232.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 145,
+    "name": "Laser de pistola rojo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/233.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 146,
+    "name": "Pantalla android 7 pulgadas 1 din",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/234.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 147,
+    "name": "Luz de discoteca en forma de panal",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/235.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 148,
+    "name": "Cargador sencillo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/237.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 149,
+    "name": "Cargador con estuche",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/238.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 150,
+    "name": "Mini refri portatil ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/239.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 151,
+    "name": "Máquina para hacer jugo de caña",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/240.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 152,
+    "name": "Cortador de puros",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/241.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 153,
+    "name": "Parlante Pioneer ovalado 6x9",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/242.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 154,
+    "name": "Cargador Samsung ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/243.jpeg",
+      "img/productos/256.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 155,
+    "name": "Grabadora de video para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/244.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 156,
+    "name": "Cargador Samsung 35w",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/245.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 157,
+    "name": "Foco para carro 22r",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/246.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 158,
+    "name": "Sillas de metal y plástico",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/247.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 159,
+    "name": "Cargador con estuche Iphone",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/248.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 160,
+    "name": "Linterna para cabeza",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/249.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 161,
+    "name": "Foco led para moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/250.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 162,
+    "name": "Cargador cable pegado",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/251.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 163,
+    "name": "Cargador LG",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/252.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 164,
+    "name": "Mosquiteros Eléctricos",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/253.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 165,
+    "name": "Cargador huawei 66w",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/254.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 166,
+    "name": "Adaptador para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/255.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 167,
+    "name": "Kit de Cámaras ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/257.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 168,
+    "name": "Holograma led de marcas para puerta de carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/258.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 169,
+    "name": "Cargador Samsung 2 en 1",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/259.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 101,
+    "name": "Cargador de carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/260.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 170,
+    "name": "Triturada de Eno",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/261.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 171,
+    "name": "Máquina para doblar varillas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/262.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 172,
+    "name": "Cargador Huawei 2 en 1",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/263.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 105,
+    "name": "Cargador Xiaomi",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/264.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 173,
+    "name": "Foco redondo para carro y moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/265.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 174,
+    "name": "Parlante Subwoofer azul 10 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/266.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 108,
+    "name": "Llaveros variados de carros",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/267.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 109,
+    "name": "Taladro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/268.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 110,
+    "name": "Parlante subwoofer 10 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/269.jpeg",
+      "img/productos/272.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 111,
+    "name": "Claxon para carro y moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/270.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 112,
+    "name": "Rasadura de metal",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/271.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 114,
+    "name": "Pantalla para Volkswagen ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/273.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 115,
+    "name": "Plancha Sony",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/amplificador.jpeg"
     ],
     "variants": []
   }
