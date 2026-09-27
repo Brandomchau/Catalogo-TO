@@ -1,0 +1,662 @@
+[
+  {
+    "id": 1,
+    "name": "-----",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/1.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 2,
+    "name": "Sombrero para el sol",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/10.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 3,
+    "name": "Escape para moto ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/3.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 4,
+    "name": "Triangulo de precaución ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/100.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 5,
+    "name": "Cargador inalámbrico ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/101.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 6,
+    "name": "Manija con cámara para Tacoma",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/102.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 7,
+    "name": "Seguro de compuerta de paila ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/103.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 8,
+    "name": "llavero tipo vaso ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/104.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 9,
+    "name": "Portaplaca led ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/105.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 10,
+    "name": "Forro de apoya brazo  para CRV 2008",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/106.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 11,
+    "name": "Andadera ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/107.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 12,
+    "name": "Parlante de 4 pulgadas ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/108.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 13,
+    "name": "Manecillas para Hilux",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/109.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 14,
+    "name": "Cable HDTV",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/110.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 15,
+    "name": "Freidora eléctrica ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/11.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 16,
+    "name": "Chatarrero 110 12",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/111.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 17,
+    "name": "Arrancador de carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/112.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 18,
+    "name": "Pito de carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/113.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 19,
+    "name": "Moledor de cafe ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/114.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 20,
+    "name": "Gato hidráulico de 2 toneladas ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/115.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 21,
+    "name": "Foco Redondo ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/116.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 22,
+    "name": "Guantes para moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 2,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/117.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 23,
+    "name": "Foco de 5 pulgadas ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/118.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 24,
+    "name": "Manecilla con cámara l200",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/119.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 25,
+    "name": "luz de parrilla ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/120.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 26,
+    "name": "Luz de antena de tiburón ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/12.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 27,
+    "name": "Kit de cromo para CRV",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/121.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 28,
+    "name": "seguro para carro ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/122.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 29,
+    "name": "Repuestos para rasuradora ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/123.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 30,
+    "name": "Cabeza para cargador ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/124.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 31,
+    "name": "kit de desmontador de radio ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/125.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 32,
+    "name": "Repuesto de manecilla para Nissan frontier ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/126.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 33,
+    "name": "led de ojos ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/127.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 34,
+    "name": "Rollo led 5,10,15,20 metros ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/128.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 35,
+    "name": "Repuesto de apoya brazo de corola ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/129.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 36,
+    "name": "Esmeril pequeño",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/130.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 37,
+    "name": "Cargador universal de laptop ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/13.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 38,
+    "name": "kit de push",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/131.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 39,
+    "name": "Pistola de calor ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/132.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 40,
+    "name": "Panel led pequeño ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/133.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 41,
+    "name": "Chaleco Reflectivo ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 2,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/140.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 42,
+    "name": "Maquina para cortar pelo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/141.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 43,
+    "name": "Insignia para carro ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/142.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 44,
+    "name": "Silla de ruedas ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/144.jpeg"
+    ],
+    "variants": []
+  }
+]

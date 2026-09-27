@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Tecno Oriental</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background: var(--bg); }
+    .admin-wrap { display: flex; min-height: 100vh; }
+
+    /* Login */
+    .login-screen {
+      position: fixed; inset: 0;
+      background: var(--gradient);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 999;
+    }
+    .login-box {
+      background: white;
+      border-radius: 24px;
+      padding: 3rem;
+      width: 360px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+      animation: slideUp 0.4s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .login-logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+    .login-sub { text-align: center; font-size: 0.85rem; color: #86868b; margin-bottom: 2rem; }
+    .login-box .form-control { margin-bottom: 1rem; border-radius: 10px; }
+    .login-hint { font-size: 0.78rem; color: #86868b; text-align: center; margin-top: 1rem; }
+
+    /* Sidebar */
+    .admin-sidebar {
+      width: 240px;
+      background: var(--bg-card);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      z-index: 100;
+    }
+    .sidebar-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      padding: 0 1.5rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .sidebar-nav { flex: 1; }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+    .sidebar-link:hover { color: var(--primary); background: linear-gradient(135deg, rgba(0,122,255,0.06), rgba(0,212,255,0.06)); }
+    .sidebar-link.active { color: var(--primary); background: linear-gradient(135deg, rgba(0,122,255,0.1), rgba(0,212,255,0.1)); font-weight: 600; }
+    .sidebar-link i { width: 20px; text-align: center; }
+    .sidebar-bottom { padding: 1rem 1.5rem; border-top: 1px solid var(--border); }
+
+    /* Main */
+    .admin-main {
+      flex: 1;
+      margin-left: 240px;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+    .admin-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .admin-page-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--text-dark); }
+
+    /* Stats grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: box-shadow 0.2s;
+    }
+    .stat-card:hover { box-shadow: var(--shadow-md); }
+    .stat-icon {
+      width: 50px; height: 50px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+    .stat-icon.blue { background: linear-gradient(135deg, rgba(0,122,255,0.12), rgba(0,212,255,0.12)); color: var(--primary); }
+    .stat-icon.green { background: rgba(52,199,89,0.12); color: #34c759; }
+    .stat-icon.orange { background: rgba(255,159,10,0.12); color: #ff9f0a; }
+    .stat-icon.purple { background: rgba(175,82,222,0.12); color: #af52de; }
+    .stat-val { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--text-dark); }
+    .stat-lbl { font-size: 0.8rem; color: var(--text-light); }
+
+    /* Content panel */
+    .content-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .panel-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+    }
+    td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-mid); vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--bg); }
+
+    .page-hidden { display: none; }
+    .admin-hidden { display: none; }
+
+    /* Forms in admin */
+    .admin-form { max-width: 600px; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    @media (max-width: 900px) {
+      .admin-sidebar { display: none; }
+      .admin-main { margin-left: 0; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+      z-index: 1000; align-items: center; justify-content: center; padding: 1rem;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal-box {
+      background: var(--bg-card); border-radius: 16px; width: 100%; max-width: 560px;
+      max-height: 90vh; overflow-y: auto; box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+      animation: slideUp 0.3s ease;
+    }
+    .modal-head {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; background: var(--bg-card); z-index: 1;
+    }
+    .modal-title { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+    .modal-close { background: none; border: none; font-size: 1.1rem; color: var(--text-light); cursor: pointer; }
+    .modal-body { padding: 1.5rem; }
+    .img-url-row { display: flex; gap: .5rem; margin-bottom: .5rem; align-items: center; }
+    .img-url-row img { width: 40px; height: 40px; object-fit: cover; border-radius: 6px; flex-shrink: 0; background: var(--bg); }
+    .img-url-row button { background: none; border: none; color: #ff3b30; cursor: pointer; font-size: 1rem; flex-shrink: 0; }
+    .row-actions { display: flex; gap: .5rem; }
+    .row-actions button { background: none; border: none; cursor: pointer; font-size: .95rem; padding: .3rem; }
+    .row-actions .edit-btn { color: var(--primary); }
+    .row-actions .del-btn { color: #ff3b30; }
+
+    /* Agrupación de productos por categoría */
+    .cat-group {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .cat-group-head {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.1rem;
+      background: var(--bg);
+      cursor: pointer;
+      user-select: none;
+    }
+    .cat-group-chevron { color: var(--text-light); font-size: 0.8rem; transition: transform 0.2s; }
+    .cat-group.collapsed .cat-group-chevron { transform: rotate(-90deg); }
+    .cat-group.collapsed .cat-group-body { display: none; }
+    .cat-group-name { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--text-dark); }
+    .cat-group-count {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--text-light);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.6rem;
+      border-radius: 50px;
+    }
+    .cat-group-body table { border-radius: 0; border: none; border-top: 1px solid var(--border); }
+
+    /* Barra de exportar / importar */
+    .sync-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    .sync-bar.pending { border-color: rgba(255,159,10,0.5); background: rgba(255,159,10,0.07); }
+    .sync-info { flex: 1; min-width: 200px; font-size: 0.84rem; color: var(--text-mid); line-height: 1.5; }
+    .sync-info strong { color: var(--text-dark); }
+    .sync-dot {
+      display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+      background: #34c759; margin-right: 0.4rem; vertical-align: middle;
+    }
+    .sync-bar.pending .sync-dot { background: #ff9f0a; }
+    .sync-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    @media (max-width: 640px) {
+      .sync-actions { width: 100%; }
+      .sync-actions .btn { flex: 1; justify-content: center; }
+    }
+
+    /* Subida de fotos */
+    .drop-zone {
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 0.75rem;
+    }
+    .drop-zone.dragover {
+      border-color: var(--primary);
+      background: rgba(0,122,255,0.06);
+      color: var(--primary);
+    }
+    .drop-zone i { font-size: 1.6rem; display: block; margin-bottom: 0.4rem; color: var(--primary); }
+    .drop-zone-link { color: var(--primary); font-weight: 600; text-decoration: underline; cursor: pointer; }
+    .img-url-row .img-meta { font-size: 0.72rem; color: var(--text-light); }
+    .img-url-row.uploaded { background: var(--bg); border-radius: 8px; padding: 0.4rem; }
+
+    /* Banco de imágenes (fotos ya sincronizadas desde el repositorio) */
+    .image-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+      gap: 0.5rem;
+      max-height: 260px;
+      overflow-y: auto;
+      padding: 0.6rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+    }
+    .image-picker-item {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      background: var(--bg-card);
+      transition: border-color 0.15s;
+    }
+    .image-picker-item:hover { border-color: var(--border); }
+    .image-picker-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .image-picker-item.selected { border-color: var(--primary); }
+    .image-picker-item.selected::after {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free'; font-weight: 900;
+      position: absolute; top: 3px; right: 3px;
+      background: var(--primary); color: #fff;
+      width: 18px; height: 18px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem;
+    }
+    .image-picker-item .name-tag {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.65); color: #fff;
+      font-size: 0.55rem; padding: 1px 3px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .image-picker-empty {
+      grid-column: 1 / -1; text-align: center; color: var(--text-light);
+      font-size: 0.82rem; padding: 1.25rem 0.5rem; line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">Tecno Oriental</div>
+    <div class="login-sub">Panel de Administración</div>
+    <form id="loginForm">
+      <input type="text" class="form-control" id="loginUser" placeholder="Usuario" required>
+      <input type="password" class="form-control" id="loginPass" placeholder="Contraseña" required>
+      <button type="submit" class="btn btn-primary btn-block" style="border-radius:10px;">
+        <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+      </button>
+    </form>
+    <div class="login-hint">Usuario: <strong>admin</strong> · Contraseña: <strong>admin123</strong></div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-wrap admin-hidden" id="adminPanel">
+  <!-- Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-logo">⚙️ G9 Admin</div>
+    <nav class="sidebar-nav">
+      <button class="sidebar-link active" data-page="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</button>
+      <button class="sidebar-link" data-page="products"><i class="fas fa-box"></i> Productos</button>
+      <button class="sidebar-link" data-page="categories"><i class="fas fa-tags"></i> Categorías</button>
+      <button class="sidebar-link" data-page="orders"><i class="fas fa-shopping-bag"></i> Pedidos</button>
+      <button class="sidebar-link" data-page="customers"><i class="fas fa-users"></i> Clientes</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <button class="sidebar-link" onclick="logout()" style="color:#ff3b30;">
+        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="admin-main">
+    <!-- Dashboard -->
+    <div id="page-dashboard">
+      <div class="admin-topbar">
+        <h1 class="admin-page-title">Dashboard</h1>
+        <div style="display:flex;align-items:center;gap:1rem;">
+
+          <a href="../index.html" class="btn btn-ghost btn-sm" target="_blank"><i class="fas fa-external-link-alt"></i> Ver Tienda</a>
+        </div>
+      </div>
+      <div class="stats-grid" id="dash-stats"></div>
+      <div class="content-panel">
+        <div class="panel-header">
+          <span class="panel-title">Pedidos Recientes</span>
+          <button class="btn btn-ghost btn-sm" onclick="showPage('orders')">Ver todos</button>
+        </div>
+        <div id="recent-orders-table"></div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div id="page-products" class="page-hidden">
+      <div class="admin-topbar">
+        <h1 class="admin-page-title">Productos</h1>
+        <div style="display:flex;gap:.6rem;">
+          <button class="btn btn-primary" onclick="showProductForm()"><i class="fas fa-plus"></i> Nuevo Producto</button>
+        </div>
+      </div>
+      <div id="image-bank-bar-products"></div>
+      <div id="sync-bar-products"></div>
+      <div class="content-panel">
+        <div id="products-table"></div>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div id="page-categories" class="page-hidden">
+      <div class="admin-topbar">
+        <h1 class="admin-page-title">Categorías</h1>
+        <div style="display:flex;gap:.6rem;">
+          <button class="btn btn-primary" onclick="showCategoryForm()"><i class="fas fa-plus"></i> Nueva Categoría</button>
+        </div>
+      </div>
+      <div id="image-bank-bar-categories"></div>
+      <div id="sync-bar-categories"></div>
+      <div class="content-panel">
+        <div id="categories-table"></div>
+      </div>
+    </div>
+
+    <!-- Orders -->
+    <div id="page-orders" class="page-hidden">
+      <div class="admin-topbar">
+        <h1 class="admin-page-title">Pedidos</h1>
+      </div>
+      <div class="content-panel">
+        <div id="orders-table"></div>
+      </div>
+    </div>
+
+    <!-- Customers -->
+    <div id="page-customers" class="page-hidden">
+      <div class="admin-topbar">
+        <h1 class="admin-page-title">Clientes</h1>
+      </div>
+      <div class="content-panel">
+        <div id="customers-table"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal (para agregar/editar productos y categorías) -->
+  <!-- Importar catálogo desde un ZIP exportado antes -->
+  <input type="file" id="importZipInput" accept=".zip" hidden
+         onchange="if(this.files[0]){importCatalog(this.files[0]);this.value='';}">
+
+  <!-- Sincronizar banco de imágenes: selecciona la carpeta img/productos de tu proyecto.
+       Solo se leen los NOMBRES de archivo, nunca se suben las fotos. -->
+  <input type="file" id="syncImagesInput" webkitdirectory directory multiple hidden
+         onchange="if(this.files.length){handleImageSync(this.files);this.value='';}">
+
+  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this) closeModal()">
+    <div class="modal-box">
+      <div class="modal-head">
+        <span id="modalTitle" class="modal-title">Nuevo</span>
+        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/store.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+  const ADMIN_USER = 'admin';
+  const ADMIN_PASS = 'admin123';
+  let currentPage = 'dashboard';
+  let currentEditingProductId = null; // producto que se está editando (null si es nuevo)
+
+  // Auth
+  document.getElementById('loginForm').addEventListener('submit', e => {
+    e.preventDefault();
+    if (document.getElementById('loginUser').value === ADMIN_USER &&
+        document.getElementById('loginPass').value === ADMIN_PASS) {
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('adminPanel').classList.remove('admin-hidden');
+      renderPage('dashboard');
+    } else {
+      showToast('Credenciales incorrectas', 'error');
+    }
+  });
+
+  function logout() {
+    document.getElementById('adminPanel').classList.add('admin-hidden');
+    document.getElementById('loginScreen').style.display = 'flex';
+  }
+
+  // Navigation
+  document.querySelectorAll('.sidebar-link[data-page]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sidebar-link').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      showPage(btn.dataset.page);
+    });
+  });
+
+  function showPage(name) {
+    document.querySelectorAll('[id^="page-"]').forEach(el => el.classList.add('page-hidden'));
+    document.getElementById(`page-${name}`).classList.remove('page-hidden');
+    currentPage = name;
+    renderPage(name);
+  }
+
+
+
+  // Render pages
+  function renderPage(name) {
+    if (name === 'dashboard') renderDashboard();
+    if (name === 'products') { renderProducts(); renderSyncBars(); renderImageBankBars(); }
+    if (name === 'categories') { renderCategories(); renderSyncBars(); renderImageBankBars(); }
+    if (name === 'orders') renderOrders();
+    if (name === 'customers') renderCustomers();
+  }
+
+  function renderDashboard() {
+    const products = G9Store.getProducts();
+    const cats = G9Store.getCategories();
+    const orders = G9Store.orders.get();
+    const customers = [...new Set(orders.map(o => o.customer?.email).filter(Boolean))];
+    const revenue = orders.reduce((s, o) => s + (o.total || 0), 0);
+
+    document.getElementById('dash-stats').innerHTML = `
+      <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-box"></i></div><div><div class="stat-val">${products.length}</div><div class="stat-lbl">Productos</div></div></div>
+      <div class="stat-card"><div class="stat-icon green"><i class="fas fa-shopping-bag"></i></div><div><div class="stat-val">${orders.length}</div><div class="stat-lbl">Pedidos</div></div></div>
+      <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-users"></i></div><div><div class="stat-val">${customers.length}</div><div class="stat-lbl">Clientes</div></div></div>
+      <div class="stat-card"><div class="stat-icon purple"><i class="fas fa-dollar-sign"></i></div><div><div class="stat-val">${formatPrice(revenue)}</div><div class="stat-lbl">Ingresos</div></div></div>`;
+
+    const recent = orders.slice(0, 5);
+    document.getElementById('recent-orders-table').innerHTML = recent.length
+      ? `<table><thead><tr><th>ID</th><th>Cliente</th><th>Total</th><th>Estado</th><th>Fecha</th></tr></thead><tbody>
+          ${recent.map(o => `<tr>
+            <td><strong>#${String(o.id).slice(-6)}</strong></td>
+            <td>${o.customer?.name || 'N/A'}</td>
+            <td>${formatPrice(o.total)}</td>
+            <td><span class="status-badge status-${o.status}">${o.status}</span></td>
+            <td>${formatDate(o.created_at)}</td>
+          </tr>`).join('')}
+        </tbody></table>`
+      : '<p style="color:var(--text-light);text-align:center;padding:2rem;">No hay pedidos aún</p>';
+  }
+
+  function renderProducts() {
+    const products = G9Store.getProducts();
+    const container = document.getElementById('products-table');
+
+    if (!products.length) {
+      container.innerHTML = '<p style="color:var(--text-light);text-align:center;padding:2rem;">No hay productos todavía. Dale clic a "Nuevo Producto".</p>';
+      return;
+    }
+
+    // Agrupar productos por categoría para manejar catálogos grandes más fácil
+    const cats = G9Store.getCategories();
+    const groups = cats.map(c => ({
+      cat: c,
+      items: products.filter(p => p.category_id === c.id)
+    })).filter(g => g.items.length > 0);
+
+    const uncategorized = products.filter(p => !cats.some(c => c.id === p.category_id));
+    if (uncategorized.length) groups.push({ cat: { id: null, name: 'Sin categoría' }, items: uncategorized });
+
+    container.innerHTML = groups.map(g => `
+      <div class="cat-group">
+        <div class="cat-group-head" onclick="this.parentElement.classList.toggle('collapsed')">
+          <i class="fas fa-chevron-down cat-group-chevron"></i>
+          <span class="cat-group-name">${g.cat.name}</span>
+          <span class="cat-group-count">${g.items.length} producto${g.items.length !== 1 ? 's' : ''}</span>
+        </div>
+        <div class="cat-group-body">
+          <table><thead><tr><th>Imagen</th><th>Nombre</th><th>Precio</th><th>Disponible</th><th></th></tr></thead><tbody>
+            ${g.items.map(p => {
+              const available = p.available !== false;
+              return `<tr>
+                <td><img src="${G9Store.imgSrc(p.images && p.images[0])}" loading="lazy" style="width:48px;height:48px;object-fit:contain;background:var(--bg);border-radius:8px;"></td>
+                <td><strong>${p.name}</strong>${p.variants?.length ? `<br><span style="font-size:.75rem;color:var(--text-light);">${p.variants.length} variante(s)</span>` : ''}</td>
+                <td>${formatPrice(p.price)}</td>
+                <td><span class="stock-pill ${available ? 'in' : 'out'}">${available ? 'Disponible' : 'No disponible'}</span></td>
+                <td><div class="row-actions">
+                  <button class="edit-btn" onclick="showProductForm(${p.id})" title="Editar"><i class="fas fa-pen"></i></button>
+                  <button class="del-btn" onclick="deleteProductConfirm(${p.id})" title="Eliminar"><i class="fas fa-trash"></i></button>
+                </div></td>
+              </tr>`;
+            }).join('')}
+          </tbody></table>
+        </div>
+      </div>`).join('');
+  }
+
+  function deleteProductConfirm(id) {
+    const p = G9Store.getProduct(id);
+    if (!confirm(`¿Eliminar "${p?.name}"? Recuerda descargar products.json después para actualizar GitHub.`)) return;
+    G9Store.deleteProduct(id);
+    renderProducts();
+    showToast('Producto eliminado.');
+  }
+
+  function showProductForm(id = null) {
+    const product = id ? G9Store.getProduct(id) : null;
+    const cats = G9Store.getCategories();
+    document.getElementById('modalTitle').textContent = product ? 'Editar Producto' : 'Nuevo Producto';
+    document.getElementById('modalBody').innerHTML = `
+      <form id="productForm">
+        <div class="form-group">
+          <label class="form-label">Nombre *</label>
+          <input class="form-control" name="name" required value="${product?.name || ''}">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Descripción</label>
+          <textarea class="form-control" name="description" style="min-height:80px;">${(product?.description || '').replace(/<\/?p>/g, '')}</textarea>
+        </div>
+               <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Precio (L)</label>
+            <input class="form-control" name="price" type="number" step="0.01" min="0" value="${product?.price ?? ''}">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Precio mayorista (L)</label>
+            <input class="form-control" name="wholesale_price" type="number" step="0.01" min="0" placeholder="Opcional" value="${product?.wholesale_price ?? ''}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Categoría *</label>
+          <select class="form-control" name="category_id" required>
+            ${cats.map(c => `<option value="${c.id}" ${product?.category_id === c.id ? 'selected' : ''}>${c.name}</option>`).join('')}
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Comentario (opcional)</label>
+          <input class="form-control" name="note" placeholder="Ej: Últimas unidades" value="${product?.note || ''}">
+          <div style="font-size:.75rem;color:var(--text-light);margin-top:.3rem;">Si lo dejas vacío, no aparece nada en la página del producto.</div>
+        </div>
+        <div class="form-group">
+          <label style="display:flex;align-items:center;gap:.5rem;font-size:.88rem;color:var(--text-mid);">
+            <input type="checkbox" name="available" ${product?.available !== false ? 'checked' : ''}> Disponible
+          </label>
+        </div>
+        <div class="form-group">
+          <label style="display:flex;align-items:center;gap:.5rem;font-size:.88rem;color:var(--text-mid);">
+            <input type="checkbox" name="featured" ${product?.featured ? 'checked' : ''}> Producto destacado
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Fotos</label>
+          <div id="image-bank-bar-form" style="margin-bottom:.7rem;"></div>
+
+          <div style="font-size:.78rem;color:var(--text-light);margin-bottom:.4rem;">
+            Elige del banco de imágenes (fotos ya en <code>img/productos/</code>). Las que ya
+            están usadas en otro producto no aparecen aquí.
+          </div>
+          <input class="form-control" id="imgPickerSearch" placeholder="Buscar por nombre de archivo..." style="margin-bottom:.6rem;">
+          <div class="image-picker-grid" id="imagePickerGrid"></div>
+
+          <div style="font-size:.78rem;color:var(--text-light);margin:.8rem 0 .4rem;">Fotos seleccionadas para este producto:</div>
+          <div id="imgUrlList"></div>
+
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;">
+            <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('fileInput').click()">
+              <i class="fas fa-cloud-upload-alt"></i> Subir foto nueva
+            </button>
+            <button type="button" class="btn btn-ghost btn-sm" onclick="addImgUrlRow('')">
+              <i class="fas fa-link"></i> Pegar un link de imagen
+            </button>
+          </div>
+          <input type="file" id="fileInput" accept="image/*" multiple hidden>
+          <div id="dropZone" style="display:none;"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Variantes (tamaños, modelos, etc.)</label>
+          <div style="font-size:.78rem;color:var(--text-light);margin-bottom:.5rem;">
+            Ej: "Tamaño" / "19 pulgadas" / L 5,499.00. Se sigue usando la misma foto para todas las variantes.
+          </div>
+          <div id="variantList"></div>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="addVariantRow()" style="margin-top:.4rem;">
+            <i class="fas fa-plus"></i> Agregar variante
+          </button>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem;">
+          <i class="fas fa-save"></i> Guardar producto
+        </button>
+      </form>`;
+
+    currentEditingProductId = product?.id || null;
+
+    (product?.images?.length ? product.images : []).forEach(url => addImgUrlRow(url));
+    (product?.variants || []).forEach(v => addVariantRow(v));
+
+    const fi = document.getElementById('fileInput');
+    fi.addEventListener('change', () => handleFiles(fi.files, addImgUrlRow));
+
+    renderImageBankBars();
+    renderImagePickerGrid();
+    document.getElementById('imgPickerSearch')?.addEventListener('input', e => renderImagePickerGrid(e.target.value));
+
+    document.getElementById('productForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const images = [...document.querySelectorAll('#imgUrlList .img-value')]
+        .map(i => i.value.trim()).filter(Boolean);
+
+      const variants = [...document.querySelectorAll('#variantList .variant-row')].map(row => ({
+        id: row.dataset.id ? parseInt(row.dataset.id) : null,
+        name: row.querySelector('[data-field="name"]').value.trim(),
+        value: row.querySelector('[data-field="value"]').value.trim(),
+        price: parseFloat(row.querySelector('[data-field="price"]').value) || 0
+      })).filter(v => v.name && v.value);
+
+      const wholesale = fd.get('wholesale_price');
+
+      const saved = G9Store.saveProduct({
+        id: product?.id || null,
+        name: fd.get('name'),
+        description: `<p>${fd.get('description') || ''}</p>`,
+        price: fd.get('price') ? parseFloat(fd.get('price')) : null,
+        wholesale_price: wholesale ? parseFloat(wholesale) : null,
+        note: fd.get('note') || '',
+        category_id: parseInt(fd.get('category_id'), 10),
+        featured: fd.get('featured') === 'on',
+        available: fd.get('available') === 'on',
+        images: images.length ? images : ['https://via.placeholder.com/400x300?text=Sin+Imagen'],
+        variants
+      });
+      closeModal();
+      renderProducts();
+      showToast('Producto guardado. Recuerda exportar el catálogo cuando termines.');
+    });
+
+    openModal();
+  }
+
+  // Muestra una fila de foto. "path" es la ruta que se guarda en products.json
+  // (ej. "img/productos/foto-123.jpg"), no la imagen completa.
+  function addImgUrlRow(path, meta) {
+    const wrap = document.createElement('div');
+    wrap.className = 'img-url-row' + (meta ? ' uploaded' : '');
+    const isFile = path && !path.startsWith('http');
+    const preview = path ? G9Store.imgSrc(path) : '';
+    wrap.innerHTML = `
+      <img src="${preview}" onerror="this.style.visibility='hidden'">
+      ${isFile
+        ? `<div style="flex:1;min-width:0;">
+             <input type="hidden" class="img-value" value="${path}">
+             <div class="img-meta"><i class="fas fa-image" style="color:#34c759;"></i> ${path.split('/').pop()}${meta ? ` · ${meta.sizeLabel}` : ''}</div>
+           </div>`
+        : `<input class="form-control img-value" placeholder="https://..." value="${path || ''}"
+             oninput="this.previousElementSibling.style.visibility='visible';this.previousElementSibling.src=this.value">`
+      }
+      <button type="button" onclick="this.parentElement.remove(); renderImagePickerGrid(document.getElementById('imgPickerSearch')?.value || '');"><i class="fas fa-times"></i></button>`;
+    document.getElementById('imgUrlList').appendChild(wrap);
+  }
+
+  // ---- Subida y optimización de fotos ----
+  // Las fotos se comprimen y se guardan como ARCHIVOS en IndexedDB.
+  // En products.json solo queda la ruta: "img/productos/<nombre>.jpg"
+  const IMG_FOLDER = 'img/productos/';
+  const IMG_EXT_RE = /\.(jpe?g|png|webp|gif|avif)$/i;
+
+  // ============================================================
+  //  BANCO DE IMÁGENES
+  //  El navegador no puede "ver" la carpeta img/productos/ del repositorio
+  //  sola, así que el usuario la selecciona una vez y guardamos solo los
+  //  NOMBRES de archivo (nunca las fotos) en un manifiesto. Ese manifiesto
+  //  viaja dentro del ZIP de exportación como data/images-manifest.json.
+  // ============================================================
+
+  function handleImageSync(fileList) {
+    const names = [...fileList]
+      .filter(f => IMG_EXT_RE.test(f.name))
+      .map(f => f.name);
+    if (!names.length) {
+      showToast('No se encontraron imágenes en esa carpeta', 'error');
+      return;
+    }
+    G9Store.imagesManifest.set(names);
+    showToast(`${names.length} imagen(es) detectadas en el banco de imágenes.`);
+    renderImageBankBars();
+    renderImagePickerGrid(document.getElementById('imgPickerSearch')?.value || '');
+  }
+
+  function renderImageBankBars() {
+    const manifest = G9Store.imagesManifest.get();
+    const available = G9Store.getAvailableImages(currentEditingProductId).length;
+    const html = `
+      <div class="sync-bar ${manifest.length ? '' : 'pending'}">
+        <div class="sync-info">
+          <span class="sync-dot"></span>
+          ${manifest.length
+            ? `<strong>${manifest.length} foto${manifest.length !== 1 ? 's' : ''} en el banco de imágenes</strong> (${available} disponible${available !== 1 ? 's' : ''} para usar ahora mismo).`
+            : `<strong>Aún no sincronizas tu carpeta de imágenes.</strong>`}
+          Selecciona la carpeta <code>img/productos</code> de este mismo proyecto para elegir fotos con su nombre original, en vez de volver a subirlas.
+        </div>
+        <div class="sync-actions">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('syncImagesInput').click()">
+            <i class="fas fa-folder-open"></i> Sincronizar carpeta de imágenes
+          </button>
+        </div>
+      </div>`;
+    ['image-bank-bar-products', 'image-bank-bar-categories', 'image-bank-bar-form'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    });
+  }
+
+  // Dibuja la cuadrícula de fotos seleccionables dentro del formulario de producto.
+  // Excluye las fotos ya usadas por OTROS productos/categorías; las del producto que
+  // se está editando siguen apareciendo (marcadas como seleccionadas).
+  function renderImagePickerGrid(filterText = '') {
+    const grid = document.getElementById('imagePickerGrid');
+    if (!grid) return;
+
+    const usedByOthers = G9Store.getUsedImageNames(currentEditingProductId);
+    const manifest = G9Store.imagesManifest.get();
+    const selectedNames = new Set(
+      [...document.querySelectorAll('#imgUrlList .img-value')]
+        .map(i => i.value.trim())
+        .filter(v => v && !v.startsWith('http') && !v.startsWith('data:') && !v.startsWith('blob:'))
+        .map(v => v.split('/').pop())
+    );
+
+    let list = manifest.filter(name => !usedByOthers.has(name) || selectedNames.has(name));
+    if (filterText.trim()) {
+      const q = filterText.trim().toLowerCase();
+      list = list.filter(name => name.toLowerCase().includes(q));
+    }
+
+    if (!list.length) {
+      grid.innerHTML = `<div class="image-picker-empty">${
+        manifest.length
+          ? 'No hay fotos disponibles con ese criterio (puede que todas estén en uso).'
+          : 'Todavía no sincronizas el banco de imágenes. Usa el botón de arriba y selecciona la carpeta img/productos de tu proyecto.'
+      }</div>`;
+      return;
+    }
+
+    grid.innerHTML = list.map(name => {
+      const path = IMG_FOLDER + name;
+      const selected = selectedNames.has(name);
+      const safeName = name.replace(/'/g, "\\'");
+      return `
+        <div class="image-picker-item ${selected ? 'selected' : ''}" title="${name}" onclick="togglePickerImage('${safeName}')">
+          <img src="${G9Store.imgSrc(path)}" loading="lazy" onerror="this.style.opacity='0.15'">
+          <span class="name-tag">${name}</span>
+        </div>`;
+    }).join('');
+  }
+
+  // Agrega o quita una foto del banco de imágenes de la selección actual del producto,
+  // usando siempre su nombre de archivo original (nunca se renombra).
+  function togglePickerImage(name) {
+    const path = IMG_FOLDER + name;
+    const rows = [...document.querySelectorAll('#imgUrlList .img-url-row')];
+    const existing = rows.find(row => row.querySelector('.img-value')?.value.trim() === path);
+    if (existing) {
+      existing.remove();
+    } else {
+      addImgUrlRow(path);
+    }
+    renderImagePickerGrid(document.getElementById('imgPickerSearch')?.value || '');
+  }
+
+  function setupDropZone(zone, input) {
+    if (!zone) return;
+    zone.addEventListener('click', () => input.click());
+    ['dragenter', 'dragover'].forEach(evt =>
+      zone.addEventListener(evt, e => { e.preventDefault(); zone.classList.add('dragover'); }));
+    ['dragleave', 'drop'].forEach(evt =>
+      zone.addEventListener(evt, e => { e.preventDefault(); zone.classList.remove('dragover'); }));
+  }
+
+  function makeFileName(original) {
+    const base = (original || 'foto')
+      .replace(/\.[^.]+$/, '')
+      .toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .slice(0, 40) || 'foto';
+    return `${base}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}.jpg`;
+  }
+
+  async function handleFiles(fileList, onDone) {
+    const files = [...fileList].filter(f => f.type.startsWith('image/'));
+    if (!files.length) { showToast('Selecciona un archivo de imagen válido', 'error'); return; }
+    let ok = 0;
+    for (const file of files) {
+      try {
+        const { blob } = await compressImage(file);
+        const name = makeFileName(file.name);
+        await G9Store.images.put(name, blob);
+        onDone(IMG_FOLDER + name, { sizeLabel: formatBytes(blob.size) });
+        ok++;
+      } catch (e) {
+        console.error(e);
+        showToast(`No se pudo procesar ${file.name}`, 'error');
+      }
+    }
+    if (ok > 1) showToast(`${ok} fotos procesadas`);
+    renderSyncBars();
+    renderImagePickerGrid(document.getElementById('imgPickerSearch')?.value || '');
+  }
+
+  // 800px y calidad 0.65 deja las fotos en ~50-90KB sin pérdida visible en pantalla
+  function compressImage(file, maxDim = 800, quality = 0.65) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = new Image();
+        img.onload = () => {
+          let { width, height } = img;
+          if (width > maxDim || height > maxDim) {
+            if (width > height) { height = Math.round(height * maxDim / width); width = maxDim; }
+            else { width = Math.round(width * maxDim / height); height = maxDim; }
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = width; canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, width, height);
+          ctx.drawImage(img, 0, 0, width, height);
+          canvas.toBlob(
+            blob => blob ? resolve({ blob }) : reject(new Error('No se pudo comprimir')),
+            'image/jpeg',
+            quality
+          );
+        };
+        img.onerror = () => reject(new Error('No se pudo leer la imagen'));
+        img.src = e.target.result;
+      };
+      reader.onerror = () => reject(new Error('No se pudo leer el archivo'));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function formatBytes(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(0) + ' KB';
+    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+
+  function addVariantRow(variant) {
+    const wrap = document.createElement('div');
+    wrap.className = 'variant-row';
+    wrap.dataset.id = variant?.id || '';
+    wrap.style.cssText = 'display:grid;grid-template-columns:1fr 1fr 110px auto;gap:.5rem;margin-bottom:.5rem;align-items:center;';
+    wrap.innerHTML = `
+      <input class="form-control" data-field="name" placeholder="Ej: Tamaño" value="${variant?.name || ''}">
+      <input class="form-control" data-field="value" placeholder="Ej: 19 pulgadas" value="${variant?.value || ''}">
+      <input class="form-control" data-field="price" type="number" step="0.01" min="0" placeholder="Precio L" value="${variant?.price ?? ''}">
+      <button type="button" onclick="this.parentElement.remove()" style="background:none;border:none;color:#ff3b30;cursor:pointer;"><i class="fas fa-times"></i></button>`;
+    document.getElementById('variantList').appendChild(wrap);
+  }
+
+  function openModal() { document.getElementById('modalOverlay').classList.add('show'); }
+  function closeModal() { document.getElementById('modalOverlay').classList.remove('show'); }
+
+  function renderCategories() {
+    const cats = G9Store.getCategories();
+    document.getElementById('categories-table').innerHTML = cats.length
+      ? `<table><thead><tr><th>Imagen</th><th>Nombre</th><th>Descripción</th><th>Productos</th><th></th></tr></thead><tbody>
+          ${cats.map(c => {
+            const count = G9Store.getProducts({ category_id: c.id }).length;
+            return `<tr>
+              <td><img src="${G9Store.imgSrc(c.image)}" loading="lazy" style="width:48px;height:48px;object-fit:contain;background:var(--bg);border-radius:8px;"></td>
+              <td><strong>${c.name}</strong></td>
+              <td style="font-size:.82rem;">${c.description || '—'}</td>
+              <td>${count}</td>
+              <td><div class="row-actions">
+                <button class="edit-btn" onclick="showCategoryForm(${c.id})" title="Editar"><i class="fas fa-pen"></i></button>
+                <button class="del-btn" onclick="deleteCategoryConfirm(${c.id})" title="Eliminar"><i class="fas fa-trash"></i></button>
+              </div></td>
+            </tr>`;
+          }).join('')}
+        </tbody></table>`
+      : '<p style="color:var(--text-light);text-align:center;padding:2rem;">No hay categorías todavía. Dale clic a "Nueva Categoría".</p>';
+  }
+
+  function deleteCategoryConfirm(id) {
+    const c = G9Store.getCategory(id);
+    const count = G9Store.getProducts({ category_id: id }).length;
+    if (count > 0 && !confirm(`Esta categoría tiene ${count} producto(s). ¿Eliminarla de todos modos?`)) return;
+    if (count === 0 && !confirm(`¿Eliminar "${c?.name}"?`)) return;
+    G9Store.deleteCategory(id);
+    renderCategories();
+    showToast('Categoría eliminada.');
+  }
+
+  function showCategoryForm(id = null) {
+    const cat = id ? G9Store.getCategory(id) : null;
+    document.getElementById('modalTitle').textContent = cat ? 'Editar Categoría' : 'Nueva Categoría';
+    document.getElementById('modalBody').innerHTML = `
+      <form id="categoryForm">
+        <div class="form-group">
+          <label class="form-label">Nombre *</label>
+          <input class="form-control" name="name" required value="${cat?.name || ''}">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Descripción</label>
+          <textarea class="form-control" name="description" style="min-height:70px;">${cat?.description || ''}</textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Foto</label>
+          <div class="drop-zone" id="catDropZone">
+            <i class="fas fa-cloud-upload-alt"></i>
+            Arrastra una foto aquí o <span class="drop-zone-link">selecciona un archivo</span>
+            <input type="file" id="catFileInput" accept="image/*" hidden>
+          </div>
+          <div id="catImgRow"></div>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="setCatImgRow('')" style="margin-top:.4rem;">
+            <i class="fas fa-link"></i> O pegar un link de imagen
+          </button>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:.5rem;">
+          <i class="fas fa-save"></i> Guardar categoría
+        </button>
+      </form>`;
+
+    setCatImgRow(cat?.image || '');
+    const cdz = document.getElementById('catDropZone');
+    const cfi = document.getElementById('catFileInput');
+    setupDropZone(cdz, cfi);
+    const onCatImg = (path, meta) => setCatImgRow(path, meta?.sizeLabel);
+    cfi.addEventListener('change', () => handleFiles(cfi.files, onCatImg));
+    cdz.addEventListener('drop', e => handleFiles(e.dataTransfer.files, onCatImg));
+
+    document.getElementById('categoryForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const imageVal = document.querySelector('#catImgRow .img-value')?.value.trim() || '';
+      G9Store.saveCategory({
+        id: cat?.id || null,
+        name: fd.get('name'),
+        description: fd.get('description') || '',
+        image: imageVal || 'https://via.placeholder.com/400x300?text=Sin+Imagen',
+        parent_id: cat?.parent_id ?? null
+      });
+      closeModal();
+      renderCategories();
+      showToast('Categoría guardada. Recuerda exportar el catálogo cuando termines.');
+    });
+
+    openModal();
+  }
+
+  function setCatImgRow(path, sizeLabel) {
+    const isFile = path && !path.startsWith('http');
+    const preview = path ? G9Store.imgSrc(path) : '';
+    document.getElementById('catImgRow').innerHTML = `
+      <div class="img-url-row${isFile ? ' uploaded' : ''}">
+        <img src="${preview}" onerror="this.style.visibility='hidden'">
+        ${isFile
+          ? `<div style="flex:1;min-width:0;">
+               <input type="hidden" class="img-value" value="${path}">
+               <div class="img-meta"><i class="fas fa-image" style="color:#34c759;"></i> ${path.split('/').pop()}${sizeLabel ? ` · ${sizeLabel}` : ''}</div>
+             </div>`
+          : `<input class="form-control img-value" placeholder="https://..." value="${path || ''}"
+               oninput="this.previousElementSibling.style.visibility='visible';this.previousElementSibling.src=this.value">`
+        }
+      </div>`;
+  }
+
+  // ============================================================
+  //  EXPORTAR / IMPORTAR CATÁLOGO
+  //  Exportar  -> ZIP con data/*.json + img/productos/*.jpg listo para el repositorio
+  //  Importar  -> carga un ZIP exportado antes, para seguir editando en otra computadora
+  // ============================================================
+
+  function renderSyncBars() {
+    G9Store.images.count().then(pending => {
+      const html = `
+        <div class="sync-bar ${pending ? 'pending' : ''}">
+          <div class="sync-info">
+            <span class="sync-dot"></span>
+            ${pending
+              ? `<strong>${pending} foto${pending !== 1 ? 's' : ''} sin publicar.</strong> Exporta el catálogo y sube el ZIP al repositorio para que tus clientes las vean.`
+              : `Sin fotos pendientes. Los cambios de texto también necesitan exportarse para publicarse.`}
+          </div>
+          <div class="sync-actions">
+            <button class="btn btn-primary btn-sm" onclick="exportCatalog()">
+              <i class="fas fa-file-zipper"></i> Exportar catálogo
+            </button>
+            <button class="btn btn-ghost btn-sm" onclick="document.getElementById('importZipInput').click()">
+              <i class="fas fa-upload"></i> Importar
+            </button>
+            <button class="btn btn-ghost btn-sm" onclick="discardLocalChanges()" title="Descarta los cambios de este navegador y vuelve a lo que hay publicado">
+              <i class="fas fa-rotate-left"></i>
+            </button>
+          </div>
+        </div>`;
+      ['sync-bar-products', 'sync-bar-categories'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = html;
+      });
+    });
+  }
+
+  async function exportCatalog() {
+    if (typeof JSZip === 'undefined') {
+      showToast('No se pudo cargar el compresor. Revisa tu conexión a internet.', 'error');
+      return;
+    }
+    showToast('Preparando el catálogo...');
+    try {
+      const zip = new JSZip();
+      const products = JSON.parse(JSON.stringify(G9Store.getProducts()));
+      const categories = JSON.parse(JSON.stringify(G9Store.getCategories()));
+      const imgFolder = zip.folder('img').folder('productos');
+
+      // 1) Fotos nuevas guardadas en este navegador
+      const pending = await G9Store.images.all();
+      pending.forEach(({ name, blob }) => imgFolder.file(name, blob));
+
+      // 2) Convierte fotos antiguas en base64 (si quedan) a archivos reales
+      let migrated = 0;
+      const migrate = (dataUrl) => {
+        const name = `migrada-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}.jpg`;
+        const base64 = dataUrl.split(',')[1];
+        imgFolder.file(name, base64, { base64: true });
+        migrated++;
+        return 'img/productos/' + name;
+      };
+      products.forEach(p => {
+        p.images = (p.images || []).map(src => src.startsWith('data:') ? migrate(src) : src);
+      });
+      categories.forEach(c => {
+        if (c.image && c.image.startsWith('data:')) c.image = migrate(c.image);
+      });
+
+      // 3) Los JSON, ya sin fotos embebidas
+      const dataFolder = zip.folder('data');
+      dataFolder.file('products.json', JSON.stringify(products, null, 2));
+      dataFolder.file('categories.json', JSON.stringify(categories, null, 2));
+      dataFolder.file('images-manifest.json', JSON.stringify(G9Store.imagesManifest.get(), null, 2));
+
+      // 4) Instrucciones dentro del ZIP
+      zip.file('LEEME.txt',
+        'CATALOGO TECNO ORIENTAL\n' +
+        '=======================\n\n' +
+        'Exportado: ' + new Date().toLocaleString('es-HN') + '\n' +
+        'Productos: ' + products.length + '\n' +
+        'Categorias: ' + categories.length + '\n' +
+        'Fotos incluidas: ' + (pending.length + migrated) + '\n' +
+        'Banco de imagenes: ' + G9Store.imagesManifest.get().length + ' nombre(s) de archivo\n\n' +
+        'COMO PUBLICARLO:\n' +
+        '1. Descomprime este ZIP.\n' +
+        '2. Copia las carpetas "data" e "img" dentro de la carpeta del proyecto,\n' +
+        '   reemplazando los archivos que ya estan ahi.\n' +
+        '3. Sube los cambios a GitHub (git add . / git commit / git push).\n' +
+        '4. Espera 1-2 minutos y revisa el sitio publicado.\n\n' +
+        'IMPORTANTE: guarda este ZIP. Si quieres seguir editando en otra\n' +
+        'computadora, abre el panel de administracion ahi y usa el boton\n' +
+        '"Importar" con este mismo archivo.\n'
+      );
+
+      const blob = await zip.generateAsync(
+        { type: 'blob', compression: 'DEFLATE', compressionOptions: { level: 6 } },
+        meta => {
+          const btn = document.querySelector('.sync-actions .btn-primary');
+          if (btn) btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${Math.round(meta.percent)}%`;
+        }
+      );
+
+      const stamp = new Date().toISOString().slice(0, 10);
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `catalogo-tecno-oriental-${stamp}.zip`;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+
+      showToast(`Catálogo exportado (${formatBytes(blob.size)}). Descomprímelo sobre tu proyecto y súbelo a GitHub.`);
+      renderSyncBars();
+    } catch (err) {
+      console.error(err);
+      showToast('No se pudo exportar el catálogo', 'error');
+      renderSyncBars();
+    }
+  }
+
+  async function importCatalog(file) {
+    if (typeof JSZip === 'undefined') {
+      showToast('No se pudo cargar el compresor. Revisa tu conexión.', 'error');
+      return;
+    }
+    if (!confirm('Esto reemplaza el catálogo que tienes en ESTE navegador con el del archivo. ¿Continuar?')) return;
+    showToast('Leyendo el archivo...');
+    try {
+      const zip = await JSZip.loadAsync(file);
+
+      const pFile = zip.file('data/products.json') || zip.file('products.json');
+      const cFile = zip.file('data/categories.json') || zip.file('categories.json');
+      const mFile = zip.file('data/images-manifest.json') || zip.file('images-manifest.json');
+      if (!pFile) { showToast('El ZIP no contiene products.json', 'error'); return; }
+
+      const products = JSON.parse(await pFile.async('string'));
+      const categories = cFile ? JSON.parse(await cFile.async('string')) : null;
+      if (mFile) G9Store.imagesManifest.set(JSON.parse(await mFile.async('string')));
+
+      // Carga las fotos del ZIP en este navegador
+      const imgFiles = zip.file(/^img\/productos\/.+/);
+      let loaded = 0;
+      for (const f of imgFiles) {
+        const blob = await f.async('blob');
+        await G9Store.images.put(f.name.split('/').pop(), blob);
+        loaded++;
+      }
+
+      G9Store.replaceAll(products, categories);
+      showToast(`Catálogo importado: ${products.length} productos y ${loaded} fotos.`);
+      setTimeout(() => location.reload(), 1200);
+    } catch (err) {
+      console.error(err);
+      showToast('No se pudo leer el archivo. ¿Seguro que es un ZIP exportado desde aquí?', 'error');
+    }
+  }
+
+  async function discardLocalChanges() {
+    if (!confirm('Esto borra los cambios y las fotos guardados en ESTE navegador, y vuelve a lo que ya está publicado en el sitio. ¿Continuar?')) return;
+    G9Store.resetProducts();
+    G9Store.resetCategories();
+    G9Store.imagesManifest.reset();
+    await G9Store.images.clear();
+    location.reload();
+  }
+
+  function renderOrders() {
+    const orders = G9Store.orders.get();
+    document.getElementById('orders-table').innerHTML = orders.length
+      ? `<table><thead><tr><th>ID</th><th>Cliente</th><th>Email</th><th>Total</th><th>Método</th><th>Estado</th><th>Fecha</th></tr></thead><tbody>
+          ${orders.map(o => `<tr>
+            <td><strong>#${String(o.id).slice(-6)}</strong></td>
+            <td>${o.customer?.name || 'N/A'}</td>
+            <td>${o.customer?.email || 'N/A'}</td>
+            <td>${formatPrice(o.total)}</td>
+            <td>${o.payment_method || '—'}</td>
+            <td>
+              <select style="padding:.3rem .6rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);font-size:.8rem;cursor:pointer;" onchange="updateOrderStatus(${o.id}, this.value)">
+                ${['pendiente','procesando','enviado','entregado','cancelado'].map(s => `<option ${o.status === s ? 'selected' : ''} value="${s}">${s}</option>`).join('')}
+              </select>
+            </td>
+            <td>${formatDate(o.created_at)}</td>
+          </tr>`).join('')}
+        </tbody></table>`
+      : '<p style="color:var(--text-light);text-align:center;padding:2rem;">No hay pedidos aún</p>';
+  }
+
+  function updateOrderStatus(id, status) {
+    const orders = G9Store.orders.get();
+    const order = orders.find(o => o.id === id);
+    if (order) {
+      order.status = status;
+      localStorage.setItem('g9_orders', JSON.stringify(orders));
+      showToast('Estado actualizado');
+    }
+  }
+
+  function renderCustomers() {
+    const orders = G9Store.orders.get();
+    const customerMap = {};
+    orders.forEach(o => {
+      if (o.customer?.email) {
+        if (!customerMap[o.customer.email]) {
+          customerMap[o.customer.email] = { ...o.customer, orders: 0, total: 0 };
+        }
+        customerMap[o.customer.email].orders++;
+        customerMap[o.customer.email].total += o.total;
+      }
+    });
+    const customers = Object.values(customerMap);
+    document.getElementById('customers-table').innerHTML = customers.length
+      ? `<table><thead><tr><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Pedidos</th><th>Total gastado</th></tr></thead><tbody>
+          ${customers.map(c => `<tr>
+            <td><strong>${c.name}</strong></td>
+            <td>${c.email}</td>
+            <td>${c.phone || '—'}</td>
+            <td>${c.orders}</td>
+            <td>${formatPrice(c.total)}</td>
+          </tr>`).join('')}
+        </tbody></table>`
+      : '<p style="color:var(--text-light);text-align:center;padding:2rem;">No hay clientes registrados</p>';
+  }
+</script>
+</body>
+</html>

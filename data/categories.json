@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Electrónica",
+    "description": "Gadgets, dispositivos y tecnología de punta",
+    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&q=80",
+    "parent_id": null
+  },
+  {
+    "id": 2,
+    "name": "Ropa y Calzado",
+    "description": "Moda, tendencias y comodidad",
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
+    "parent_id": null
+  },
+  {
+    "id": 3,
+    "name": "Accesorios",
+    "description": "Complementa tu estilo con nuestros accesorios",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80",
+    "parent_id": null
+  },
+  {
+    "id": 4,
+    "name": "Hogar y Oficina",
+    "description": "Todo para tu hogar y espacio de trabajo",
+    "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
+    "parent_id": null
+  },
+  {
+    "id": 5,
+    "name": "Vehicular ",
+    "description": "",
+    "image": "https://via.placeholder.com/400x300?text=Sin+Imagen",
+    "parent_id": null
+  },
+  {
+    "id": 6,
+    "name": "Accesorios para Carro ",
+    "description": "",
+    "image": "https://via.placeholder.com/400x300?text=Sin+Imagen",
+    "parent_id": null
+  },
+  {
+    "id": 7,
+    "name": "Variado ",
+    "description": "",
+    "image": "https://via.placeholder.com/400x300?text=Sin+Imagen",
+    "parent_id": null
+  }
+]
