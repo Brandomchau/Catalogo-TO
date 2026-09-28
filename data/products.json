@@ -1018,7 +1018,10 @@
     "images": [
       "img/productos/16.jpeg",
       "img/productos/194.jpeg",
-      "img/productos/20.jpeg"
+      "img/productos/20.jpeg",
+      "img/productos/23.jpeg",
+      "img/productos/228.jpeg",
+      "img/productos/32.jpeg"
     ],
     "variants": []
   },
@@ -2671,6 +2674,1375 @@
     "available": true,
     "images": [
       "img/productos/pierna.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 179,
+    "name": "Pantalla de 12 horizontal ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/21.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 180,
+    "name": "Retrovisor con camara ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/22.jpeg",
+      "img/productos/73.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 182,
+    "name": "Secadora de cabello ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/24.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 183,
+    "name": "Convertidor de 12 a 110 de 300w",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/25.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 184,
+    "name": "Kit de luces señalizadoras ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/26.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 185,
+    "name": "Aspiradora portátil para carro ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/27.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 186,
+    "name": "Faja de fuerza ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 2,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/28.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 187,
+    "name": "Luz led de carro ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/29.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 188,
+    "name": "Led motocicleta ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/30.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 189,
+    "name": "LED auxiliares para vehículo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/31.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 190,
+    "name": "kit de terminales eléctricas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/33.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 192,
+    "name": "Parlante 4 pulgadas ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/34.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 193,
+    "name": "luces LED decorativas DRL",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/35.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 194,
+    "name": "Sombreros para sol ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 2,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/36.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 195,
+    "name": "Megáfono ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/37.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 196,
+    "name": "Rasuradora Kemel",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/38.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 197,
+    "name": "Pantalla con perilla ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/39.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 198,
+    "name": "Cable RCA de audio",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/40.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 199,
+    "name": "kit de bisagras para puertas tipo Lamborghini",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/41.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 200,
+    "name": "Fusible ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/42.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 201,
+    "name": "tweeters de audio para automóvil",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/43.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 202,
+    "name": "LED auxiliar para motocicleta",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/44.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 203,
+    "name": "Medidor de presión de neumáticos",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/45.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 204,
+    "name": "linterna LED recargable",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/46.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 205,
+    "name": "Magnetrón de microondas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/47.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 206,
+    "name": "manómetro de presión para neumáticos",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/48.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 207,
+    "name": "Brazo hidráulico para puerta",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/49.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 179,
+    "name": "Led personalizable para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/127.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 180,
+    "name": "Kit de encendido push",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/131.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 181,
+    "name": "Halógena para carro Z30 ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/147.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 182,
+    "name": "Manecilla con cámara NP300",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/150.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 183,
+    "name": "Cámara para Hilux revo ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/163.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 184,
+    "name": "Stop de Hilux revo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/169.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 185,
+    "name": "Halógena y DRL para HIACE",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/17.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 186,
+    "name": "Nebulizador",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/nebulizador.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 187,
+    "name": "Micrófono para dispositivo móvil",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 3,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/MC.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 188,
+    "name": "Cangurera ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/mariconera.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 189,
+    "name": "Máquina de Palomita",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/maquina de palomitas.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 190,
+    "name": "Juego de cubos",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/Juegos cubo.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 191,
+    "name": "Kit para sacar abolladuras ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/50.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 192,
+    "name": "Cargador 120w",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/51.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 193,
+    "name": "Parlante Kuerl 4 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/52.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 194,
+    "name": "Ollas de presión",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 4,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/53.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 195,
+    "name": "Foco de moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/55.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 196,
+    "name": "Transformador de Microondas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/56.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 197,
+    "name": "Aspiradora de mano Multifuncional",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/57.jpeg",
+      "img/productos/78.jpeg",
+      "img/productos/74.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 198,
+    "name": "Ojo led para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/58.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 199,
+    "name": "Afeitadora de pelo transparente",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/59.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 200,
+    "name": "Lampara para cabeza ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/60.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 201,
+    "name": "Amplificador de audio Spider para carro de 2 canales",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/61.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 202,
+    "name": "Sistema de alarma para moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/62.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 203,
+    "name": "Luces LED laterales para vehículo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/63.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 204,
+    "name": "Luces LED auxiliares delantera para moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/64.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 205,
+    "name": "Halógenas para moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/65.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 206,
+    "name": "Kit de luces direccionales LED para motocicleta",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/66.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 207,
+    "name": "Foco de mano",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/67.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 208,
+    "name": "Faja lumbar de soporte",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/68.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 209,
+    "name": "Kit de Halogenas para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/69.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 210,
+    "name": "luces LED tipo botón",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/70.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 211,
+    "name": "Encendedor de cuello largo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/71.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 212,
+    "name": "Sistema de alarma para caro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/72.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 213,
+    "name": "Soporte de celular para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/75.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 214,
+    "name": "Caja de herramientas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/76.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 215,
+    "name": "Silla de ruedas para niño",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/77.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 216,
+    "name": "Botas y Tobilleras ortopédicas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/79.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 217,
+    "name": "Foco cuadrado",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/80.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 218,
+    "name": "Manija para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/81.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 219,
+    "name": "Sistema de bloqueo de puerta para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/82.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 220,
+    "name": "Juego de ollas para acampar",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/83.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 221,
+    "name": "Retrovisor con pantalla sencillo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/84.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 222,
+    "name": "Pantalla tipo tesla",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/85.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 223,
+    "name": "Cargador para carro",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "https://via.placeholder.com/400x300?text=Sin+Imagen",
+      "img/productos/86.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 224,
+    "name": "Luces de posición laterales para vehículo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/87.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 225,
+    "name": "Manecilla para puerta L200",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/88.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 226,
+    "name": "Foco para moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/89.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 227,
+    "name": "Kit de herramientas para limpieza dental",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/90.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 228,
+    "name": "Arnés reflectivo",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/91.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 229,
+    "name": "Extensor de enchufe",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/92.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 230,
+    "name": "Parlante de 5 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/93.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 231,
+    "name": "Focos H4 con lupa",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/94.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 232,
+    "name": "Luces LED de posición",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/95.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 233,
+    "name": "Pantalla de perilla de 10 pulgadas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/96.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 234,
+    "name": "Retrovisor para moto",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 5,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/97.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 235,
+    "name": "Kit para demontar radios",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/98.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 236,
+    "name": "Kit de cableado de amplificadores",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/99.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 237,
+    "name": "Cámara panorámica wifi ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 1,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/camara wifi.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 238,
+    "name": "Enchufe macho industrial",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/con macho.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 239,
+    "name": "Estufa de gas de 2 hornillas",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/estufa.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 240,
+    "name": "Foco",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 7,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/foco.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 241,
+    "name": "Soporte universal para celular para espejo retrovisor ",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/HR.jpeg"
+    ],
+    "variants": []
+  },
+  {
+    "id": 242,
+    "name": "Kit de paletas para desmontar radios",
+    "description": "<p></p>",
+    "price": null,
+    "wholesale_price": null,
+    "note": "",
+    "category_id": 6,
+    "featured": false,
+    "available": true,
+    "images": [
+      "img/productos/kid.jpeg"
     ],
     "variants": []
   }
