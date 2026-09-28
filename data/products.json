@@ -1,20 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "-----",
-    "description": "<p></p>",
-    "price": null,
-    "wholesale_price": null,
-    "note": "",
-    "category_id": 1,
-    "featured": false,
-    "available": true,
-    "images": [
-      "img/productos/1.jpeg"
-    ],
-    "variants": []
-  },
-  {
     "id": 2,
     "name": "Sombrero para el sol",
     "description": "<p></p>",
@@ -1002,26 +987,6 @@
     "available": true,
     "images": [
       "img/productos/159.jpeg"
-    ],
-    "variants": []
-  },
-  {
-    "id": 69,
-    "name": "Borrar",
-    "description": "<p></p>",
-    "price": null,
-    "wholesale_price": null,
-    "note": "",
-    "category_id": 1,
-    "featured": false,
-    "available": true,
-    "images": [
-      "img/productos/16.jpeg",
-      "img/productos/194.jpeg",
-      "img/productos/20.jpeg",
-      "img/productos/23.jpeg",
-      "img/productos/228.jpeg",
-      "img/productos/32.jpeg"
     ],
     "variants": []
   },
