@@ -259,7 +259,7 @@
         <div class="info">
           ${cat ? `<span class="product-cat"><i class="fas fa-tag"></i> ${cat.name}</span>` : ''}
           <h1 class="product-title">${currentProduct.name}</h1>
-          <div class="product-price-lg" id="prod-price">${formatPrice(currentProduct.price)}</div>
+         <div class="product-price-lg" id="prod-price" style="display:none;">${formatPriceOrQuote(currentProduct.price)}</div>
           ${currentProduct.wholesale_price ? `
             <div class="wholesale-row">
               <i class="fas fa-boxes-stacked"></i> Precio mayorista: <strong>${formatPrice(currentProduct.wholesale_price)}</strong>
